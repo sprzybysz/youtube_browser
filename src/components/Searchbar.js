@@ -11,7 +11,7 @@ class Searchbar extends Component {
 
     handleChange(event) {
       this.setState({value: event.target.value});
-
+      // this.props.onFormSubmit(this.state.value);
     }
 
     handleSubmit(event) {
@@ -23,14 +23,14 @@ class Searchbar extends Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit} className="search_nav row">
-            <div className="col-md-10 pl-0">
+            <div className="col-sm-12 col-md-10">
               <input
                 value={this.state.value}
                 onChange={this.handleChange}
                 type="text"
                 />
             </div>
-            <div className="col-md-2"><button className="btn btn-dark" type="submit" value="Submit">Search</button></div>
+            <div className="col-sm-12 col-md-2"><button className="btn btn-dark" type="submit" value="Submit">Search</button></div>
         </form>
       </div>
     );
